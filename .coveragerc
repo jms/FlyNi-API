@@ -1,0 +1,3 @@
+[run]
+include = FlyNi-API/*
+omit = *migrations*
