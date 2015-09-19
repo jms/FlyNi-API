@@ -31,16 +31,15 @@ DJANGO_APPS = (
     # Useful template tags:
     # 'django.contrib.humanize',
 
-    # Admin
-    'django.contrib.admin',
+    'material', # Material Design Admin
+    'material.frontend',
+    'material.admin',
+    'django.contrib.admin', # Django Base Admin
 )
 THIRD_PARTY_APPS = (
-    'crispy_forms',  # Form layouts
-    'allauth',  # registration
-    'allauth.account',  # registration
-    'allauth.socialaccount',  # registration
     'rest_framework', # DRF
     'rest_framework.authtoken', # DRF tokens
+    'djcelery', # Django Celery
 )
 
 # Apps specific for this project go here.
@@ -160,6 +159,7 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
                 # Your stuff: custom template context processors go here
+                'material.frontend.context_processors.modules', # Material Admin Context Processors
             ],
         },
     },
@@ -206,7 +206,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # ------------------------------------------------------------------------------
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
 )
 
 # Some really nice defaults
