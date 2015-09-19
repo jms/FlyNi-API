@@ -31,9 +31,7 @@ DJANGO_APPS = (
     # Useful template tags:
     # 'django.contrib.humanize',
 
-    'material', # Material Design Admin
-    'material.frontend',
-    'material.admin',
+    'flat', # Flat Django Admin
     'django.contrib.admin', # Django Base Admin
 )
 THIRD_PARTY_APPS = (
@@ -44,8 +42,8 @@ THIRD_PARTY_APPS = (
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
-    'FlyNi-API.users',  # custom users app
-    # Your stuff: custom apps go here
+    'FlyNi-API.users',  # Custom users app
+    'FLyNI-API.flyni', # Main App
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -159,7 +157,6 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
                 # Your stuff: custom template context processors go here
-                'material.frontend.context_processors.modules', # Material Admin Context Processors
             ],
         },
     },
