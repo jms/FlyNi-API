@@ -28,12 +28,17 @@ redis>=2.10.0
 # Celery
 django-celery==3.1.16
 celery==3.1.16
+billiard==3.3.0.20
 
 # API
 djangorestframework==3.2.3
 
 # Admin 
-django-material==0.4.1
+django-flat-theme==1.1.1
 
 # DDS
 django-dynamic-scraper-0.7.3
+
+# Scrapy
+scrapy==1.0.3
+scrapy-djangoitem==1.0.0
