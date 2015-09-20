@@ -37,7 +37,7 @@ djangorestframework==3.2.3
 django-flat-theme==1.1.1
 
 # DDS
-django-dynamic-scraper-0.7.3
+django-dynamic-scraper==0.7.3
 
 # Scrapy
 scrapy==1.0.3
