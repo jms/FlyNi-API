@@ -12,4 +12,4 @@ def run_spiders():
 @task()
 def run_checkers():
     t = TaskUtils()
-    t.run_checkers(Item, 'news_website__scraper', 'checker_runtime', 'fly_checker')
+    t.run_checkers(Item, 'website__scraper', 'checker_runtime', 'fly_checker')

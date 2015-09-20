@@ -38,7 +38,6 @@ THIRD_PARTY_APPS = (
     'rest_framework', # DRF
     'rest_framework.authtoken', # DRF tokens
     'djcelery', # Django Celery
-    'dynamic_scraper', # Django Dynamic Scraper
 )
 
 # Apps specific for this project go here.

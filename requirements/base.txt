@@ -35,10 +35,3 @@ djangorestframework==3.2.3
 
 # Admin 
 django-flat-theme==1.1.1
-
-# DDS
-django-dynamic-scraper==0.7.3
-
-# Scrapy
-scrapy==1.0.3
-scrapy-djangoitem==1.0.0
