@@ -38,12 +38,13 @@ THIRD_PARTY_APPS = (
     'rest_framework', # DRF
     'rest_framework.authtoken', # DRF tokens
     'djcelery', # Django Celery
+    'dynamic_scraper', # Django Dynamic Scraper
 )
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
     'FlyNi-API.users',  # Custom users app
-    'FLyNI-API.flyni', # Main App
+    'FlyNi-API.flyni', # Main App
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
