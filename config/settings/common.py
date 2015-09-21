@@ -13,7 +13,7 @@ from __future__ import absolute_import, unicode_literals
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 3  # (/a/b/myfile.py - 3 = /)
-APPS_DIR = ROOT_DIR.path('FlyNi-API')
+APPS_DIR = ROOT_DIR.path('flyni_api')
 
 env = environ.Env()
 
@@ -42,8 +42,8 @@ THIRD_PARTY_APPS = (
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
-    'FlyNi-API.users',  # Custom users app
-    'FlyNi-API.flyni', # Main App
+    'flyni_api.users',  # Custom users app
+    'flyni_api.flyni', # Main App
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -64,7 +64,7 @@ MIDDLEWARE_CLASSES = (
 # MIGRATIONS CONFIGURATION
 # ------------------------------------------------------------------------------
 MIGRATION_MODULES = {
-    'sites': 'FlyNi-API.contrib.sites.migrations'
+    'sites': 'flyni_api.contrib.sites.migrations'
 }
 
 # DEBUG
@@ -162,8 +162,6 @@ TEMPLATES = [
     },
 ]
 
-# See: http://django-crispy-forms.readthedocs.org/en/latest/install.html#template-packs
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 # STATIC FILE CONFIGURATION
 # ------------------------------------------------------------------------------

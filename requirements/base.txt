@@ -35,3 +35,9 @@ djangorestframework==3.2.3
 
 # Admin 
 django-flat-theme==1.1.1
+
+# Scrap
+beautifulsoup4==4.4.0
+
+# Human Friendly request
+requests==2.7.0
