@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 
 class Scrap(object):
-    
+
     def __init__(self, url):
         self.url = url
         self.run_scrap()
@@ -17,17 +17,18 @@ class Scrap(object):
             elements = html.find_all('tr',{'class':'listado'})
 
             for item in elements:
-                line = item.find('td').getText().encode('utf-8').strip()
-                fly_number = int(item.find('td').next_sibling.next_sibling.getText())
-                origin = item.find('td').next_sibling.next_sibling.next_sibling.next_sibling.getText().encode('utf-8').strip()
-                string_hour = item.find('td').next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.getText().encode('utf-8').strip()
-                
+                cols = item.find_all('td', recursive=False)  # direct children
+
+                line = cols[0].getText('', strip=True).encode('utf-8')
+                fly_number = int(cols[1].getText('', strip=True))
+                origin = cols[2].getText('', strip=True).encode('utf-8')
+                string_hour = cols[3].getText('', strip=True).encode('utf-8')
                 try:
                     hour = time.strptime(string_hour, '%I:%M %p')
                 except:
                     hour = time.strptime(string_hour, '%H:%M %p')
 
-                status = item.find('td').next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.getText().encode('utf-8').strip()
+                status = cols[4].getText('', strip=True).encode('utf-8')
 
                 print '-----------'*5
                 print line, fly_number, origin, hour, status
@@ -35,6 +36,3 @@ class Scrap(object):
 
         else:
             print "Status Code %d" % req.status_code
-
-
-
